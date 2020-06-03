@@ -60,3 +60,14 @@ def complex_add(x : Complex, y : Complex) -> Complex:
     ans = (real, imaginary)
 
     return ans
+
+#Complex Multiplication
+# 1. A complex number x = a + bi, represented as a tuple (a, b)
+# 2. A complex number y = c + di, represented as a tuple (c, d)
+# Goal: Return the product of these two numbers x * y = g + hi, represented as a tuple (g, h)
+######################################################################################################
+
+@exercise 
+def complex_mult(x : Complex, y : Complex) -> Complex:
+    x = (a, b)
+    y = (c, d)
