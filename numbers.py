@@ -41,3 +41,22 @@ def imaginary_power(n : int) -> int:
 # 1. A complex number x = a + bi, represented as a tuple (a, b)
 # 2. A complex number y = c + di, represented as a tuple (c, d)
 # Goal : Return the sum of these two numbers  x + y = z = g + hi, represented as tuple (g, h)
+
+@exercise
+def complex_add(x : Complex, y : Complex) -> Complex:
+    # You can extract elements from a tuple like this
+    a = x[0]
+    b = x[1]
+
+    c = y[0]
+    d = y[1]
+
+    #This creates a new variable and stores the real component into it
+    real = a + c
+    # Replace the ... with code to calculate the imaginary component
+    imaginary = b + d
+
+    # You can create a tuple like this
+    ans = (real, imaginary)
+
+    return ans
