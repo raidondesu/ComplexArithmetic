@@ -21,3 +21,23 @@ def imaginary_power(n : int) -> int:
         return 1
     else:
         return -1 
+
+#Complex Numbers
+######################################################################################################
+# Adding a real number to an imaginary number will be partly real and partly imaginary (Complex number)
+# A complex number is simply the real part and the imaginary part being treated as a single number
+######################################################################################################
+# Complex numbers are generally written as the sum of their two parts
+# a + bi (both a and b are real numbers)
+# For example : 3 + 4i or -5 - 7i are valid complex numbers
+#######################################################################################################
+# Purely real or purely imaginary numbers can also be written as complex numbers 
+# 2 is 2 + 0i and -3i is 0 - 3i
+#######################################################################################################
+# When performing operations on complex numbers it is helpful to treat them as polynomials in terms of i
+#
+#Excercise 2: Complex Addition
+#######################################################################################################
+# 1. A complex number x = a + bi, represented as a tuple (a, b)
+# 2. A complex number y = c + di, represented as a tuple (c, d)
+# Goal : Return the sum of these two numbers  x + y = z = g + hi, represented as tuple (g, h)
