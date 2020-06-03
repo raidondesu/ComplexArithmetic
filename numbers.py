@@ -74,3 +74,22 @@ def complex_mult(x : Complex, y : Complex) -> Complex:
 
     real = (a * c) - (b *d)
     imaginary = (a * d) + (c * b)
+
+    return (real, imaginary)
+
+# Complex Conjugate - A complex number with an equal real part and an imaginary part equal in magnitude but opposite in sign
+# The conjugate is a simple operation : Given a complex number (x = a + bi)
+# Conjugate = x* = a - bi
+# A complex number multiplied by its conjugate always produces a non-negative real number
+# Conjugates distribuyte over both complex addition and multiplication
+####
+#Complex Conjugate
+# Input : A complex number represented as a tuple
+# Goal : Return the complex conjugate represented as a tuple
+
+@exercise
+def conjugate(x : Complex) -> Complex: 
+    real = x[0]
+    imaginary = - x[1]
+
+    return (real, imaginary)
