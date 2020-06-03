@@ -71,3 +71,6 @@ def complex_add(x : Complex, y : Complex) -> Complex:
 def complex_mult(x : Complex, y : Complex) -> Complex:
     (a, b) = x
     (c, d) = y
+
+    real = (a * c) - (b *d)
+    imaginary = (a * d) + (c * b)
