@@ -69,5 +69,5 @@ def complex_add(x : Complex, y : Complex) -> Complex:
 
 @exercise 
 def complex_mult(x : Complex, y : Complex) -> Complex:
-    x = (a, b)
-    y = (c, d)
+    (a, b) = x
+    (c, d) = y
