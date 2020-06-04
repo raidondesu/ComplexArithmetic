@@ -110,3 +110,7 @@ def conjugate(x : Complex) -> Complex:
 def complex_div(x: Complex, y : Complex) -> Complex:
     (a, b) = x
     (c, d) = y
+
+    denominator = (c ** 2) + (d ** 2)
+
+    
