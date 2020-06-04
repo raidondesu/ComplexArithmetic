@@ -112,5 +112,9 @@ def complex_div(x: Complex, y : Complex) -> Complex:
     (c, d) = y
 
     denominator = (c ** 2) + (d ** 2)
+    
+    real = ((a * c) + (b * d)) / denominator
+    imaginary = ((a * (-d)) + (c * b)) / denominator
 
+    return (real, imaginary)
     
