@@ -93,3 +93,20 @@ def conjugate(x : Complex) -> Complex:
     imaginary = - x[1]
 
     return (real, imaginary)
+
+# Complex Division
+# The next use for the conjugate is complex division
+# Lets take two complex numbers
+# 1. x = a + bi
+# 2. y = c + di != 0
+############################
+#
+# 1 represented as a tuple (a, b)
+# 2 represented as a tuple (c, d)
+# Goal : Return the result of the division x/y = g + hi
+#
+############################
+@exercise
+def complex_div(x: Complex, y : Complex) -> Complex:
+    (a, b) = x
+    (c, d) = y
