@@ -176,3 +176,33 @@ def complex_exp_real(r : float, x : Complex) -> Complex:
     imaginary = ra * math.sin(b * lnr)
 
     return (real, imaginary)
+
+#Cartesian to polar conversion
+# Input : A complex number x = a + bi , represented as a tuple (a , b)
+# Goal : Return the polar representation of x = (re ** i(theta))
+##############################################################
+# r should be non-negative : r >= 0
+# theta should be between -pi and pi : -pi < theta <= pi
+##############################################################
+@exercise 
+def polar_convert(x : Complex) -> Polar:
+    (a, b) = x
+
+    r = math.sqrt(a ** 2 + b ** 2)
+    theta = math.atan2(b, a)
+
+    return (r, theta)
+##############################################################
+##############################################################
+# Polar to Cartesian Conversion
+# Input : A complex number x = (r ** i(theta)) represented in polar form as a tuple (r, theta)
+# Goal : Return the cartesian representation of x = a + bi, represented as a tuple (a, b)
+@exercise
+def cartesian_convert(x : Polar) -> Complex:
+    (r, theta) = x
+
+    real = r * math.cos(theta)
+    imaginary = r * math.sin(theta)
+
+    return (real, imaginary)
+    
