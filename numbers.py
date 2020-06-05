@@ -129,7 +129,6 @@ def complex_div(x: Complex, y : Complex) -> Complex:
 ############################
 @exercise
 def modulus(x : Complex) -> float: 
-<<<<<<< HEAD
     return math.sqrt(x[0] ** 2 + x[1] ** 2)
 
 # Complex Exponents
@@ -151,6 +150,4 @@ def complex_exp(x : Complex) -> Complex:
     imaginary = expa * math.sin(b)
 
     return (real, imaginary)
-=======
     return math.sqrt(x[0] ** 2 + x[1] ** 2)
->>>>>>> master
