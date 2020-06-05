@@ -150,4 +150,29 @@ def complex_exp(x : Complex) -> Complex:
     imaginary = expa * math.sin(b)
 
     return (real, imaginary)
-    return math.sqrt(x[0] ** 2 + x[1] ** 2)
+
+# Complex Powers of real numbers
+# Inputs : 
+# 1. A non- negative real number (r)
+# 2. A complex number (x = a + bi) represented as a tuple (a, b)
+# Goal: Return the complex number (r ** x) = (r ** a + bi) = g + hi
+@exercise
+def complex_exp_real(r : float, x : Complex) -> Complex:
+    #Since ln(r) is only defined for positive numbers, we check for this special case.
+    #If r = 0, raising it to any power will give 0
+    #Calling return before the end of the function will not execute the rest of the function
+    if (r == 0):
+        return (0, 0)
+    
+    (a, b) = x
+
+    #Raise r to the power of a
+    ra  = r ** a
+
+    # Natural logarithm of r
+    lnr = math.log(r)
+
+    real = ra * math.cos(b * lnr)
+    imaginary = ra * math.sin(b * lnr)
+
+    return (real, imaginary)
