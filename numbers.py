@@ -117,4 +117,16 @@ def complex_div(x: Complex, y : Complex) -> Complex:
     imaginary = ((a * (-d)) + (c * b)) / denominator
 
     return (real, imaginary)
-    
+
+# Modulus - generalizes the absolute value operator on real numbers to the complex plane
+# Abosolute value - The distance of a value from zero on a number line
+# The modulus of a complex number is its distance from 0 + 0i
+############################
+# Input : A complex number (x = a + bi) represented as a tuple (a, b)
+# Goal : Return the modulus of this number | x |
+# Solution : | x | = sqrt(a ** 2 + b ** 2)
+# Solve using the pythagorean theorem
+############################
+@exercise
+def modulus(x : Complex) -> float: 
+    return math.sqrt(x[0] ** 2 + x[1] ** 2)
