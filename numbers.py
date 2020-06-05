@@ -233,3 +233,30 @@ def polar_mult(x : Polar, y : Polar) -> Polar:
         angle = angle + 2.0 * math.pi
     
     return (radius, angle)
+
+# Arbitrary complex exponents
+# 1. A complex number x = a + bi, represented as a tuple (a, b)
+# 2. A complex number y = c + di, represented as a tuple (c, d)
+# Goal : Return the result of raising x to the power of y
+# (x ** y) = (a + bi) ** (c + di) = z = g + hi represented as a tuple (g, h)
+@exercise
+def complex_exp_arbitrary(x : Complex, y : Complex) -> Complex: 
+    (a, b) = x
+    (c, d) = y
+
+    # Convert x to polar form
+    r = math.sqrt(a ** 2 + b ** 2)
+    theta = math.atan2(b, a)
+
+    # Special case for r = 0
+    if (r == 0):
+        return (0, 0)
+    
+    lnr = math.log(r)
+
+    exponent = math.exp(lnr * c - d * theta)
+
+    real = exponent * (math.cos(lnr * d + theta * c))
+    imaginary = exponent * (math.sin(lnr * d + theta * c))
+
+    return (real, imaginary)
