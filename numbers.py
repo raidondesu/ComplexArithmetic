@@ -129,4 +129,24 @@ def complex_div(x: Complex, y : Complex) -> Complex:
 ############################
 @exercise
 def modulus(x : Complex) -> float: 
-    return math.sqrt(x[0] ** 2 + x[1] ** 2) 
+    return math.sqrt(x[0] ** 2 + x[1] ** 2)
+
+# Complex Exponents
+# Input : A complex number (x = a + bi) represented by a tuple (a, b)
+# Goal : Return the complex number (e ** x =  e ** a + bi) = g + hi represented as a tuple (g, h)
+# Eulers constant e is available in the math library, as are pythons trigonometric fuctions
+#############################
+# (e ** a + bi) = (e ** a)(e ** bi) 
+# (e ** a) = real number
+# (e ** bi) == (e ** i(theta)) = cos(theta) + i(sin(theta))
+# Then subsitute into our expression (e ** a)(cosb + isinb) = (e ** a)(cosb) + (e ** a)(sinbi)
+@exercise
+def complex_exp(x : Complex) -> Complex:
+
+    (a, b) = x
+
+    expa = math.e ** a
+    real = expa * math.cos(b)
+    imaginary = expa * math.sin(b)
+
+    return (real, imaginary)
