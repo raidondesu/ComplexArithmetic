@@ -205,4 +205,31 @@ def cartesian_convert(x : Polar) -> Complex:
     imaginary = r * math.sin(theta)
 
     return (real, imaginary)
+
+# Polar Multiplication
+# Inputs :
+# 1. A complex number x = (r1)(e ** i(theta1)) represented in polar form as a tuple (r1, theta1)
+# 2. A complex number y = (r2)(e ** i(theta2)) represented in polar form as a tuple (r2, theta2)
+# Goal : Return the result of the multiplication (x)(y) = z = (r3)(e ** i(theta3)) represented in polar form as a tuple (r3, theta3)
+# r3 should be non-negative : r3 >= 0
+# theta3 should be between -pi and pi: -pi < theta3 <= pi
+# Try to avoid converting the numbers into cartesian form
+##############################################################
+@exercise
+def polar_mult(x : Polar, y : Polar) -> Polar:
+    (r1, theta1) = x
+    (r2, theta2) = y
     
+    radius = r1 * r2
+    angle = theta1 + theta2
+
+    #If the calculated angle is larger than pi, we will subtract 2pi
+    if (angle > math.pi):
+        # Reassign the value for angle
+        angle = angle - 2.0 * math.pi
+
+    #If the calculated angle is smaller than -pi, we will add 2pi
+    elif (angle <= -math.pi):
+        angle = angle + 2.0 * math.pi
+    
+    return (radius, angle)
